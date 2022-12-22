@@ -1,0 +1,56 @@
+:root {
+  --black: rgba(22.4%, 22.4%, 22.4%, 1);
+  --blue: rgb(0, 191, 255, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--black);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--black);
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/*the ~ looks for any preceeding sibling, 
+it doesn't have to be immediatly after*/
+.nav-toggle:checked ~ nav {
+  display: block;
+}

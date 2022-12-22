@@ -1,0 +1,36 @@
+{% extends 'tool/common.html' %} {% block content %}
+<div class="container my-5 text-center" style="max-width: 580px">
+  <h1>Sushi per Programmatori!</h1>
+  <p class="lead">
+    Concediti ora una favolosa pausa ricca di sapore e di carboidrati. E'
+    scientificamente provato: i nostri sushi rolls ti aiutano a scrivere un
+    codice più performante
+  </p>
+  <a href="{%  url 'jupyter' %}" type="button" class="btn btn-primary"
+    >Vai a jupyter</a
+  >
+  <a href="{%  url 'results' %}" type="button" class="btn btn-secondary"
+    >Esegui algoritmo</a
+  >
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem">
+        <img src="./images/california.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">California Roll</h5>
+          <p class="card-text">
+            Un piatto ricco di saggezza e tradizione. Ogni caloria ingerita
+            contiene il coraggio di Son Goku, la perspicacia del Detective Conan
+            e la prestanza fisica di Doraemon
+          </p>
+          <a href="#" class="btn btn-primary">Acquista</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
