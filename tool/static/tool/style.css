@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
 :root {
   --black: rgba(22.4%, 22.4%, 22.4%, 1);
   --blue: rgb(0, 191, 255, 1);
@@ -7,6 +9,20 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -24,7 +40,9 @@ nav {
   left: 0;
   background: var(--black);
   width: 100%;
-  display: none;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 200ms ease-in-out;
 }
 
 nav ul {
@@ -43,14 +61,256 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
   text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 75ms ease-in-out;
 }
 
 nav a:hover {
   color: var(--blue);
 }
 
+.title {
+  display: none;
+}
+
 /*the ~ looks for any preceeding sibling, 
 it doesn't have to be immediatly after*/
 .nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after {
   display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label::before,
+.nav-toggle-label::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label::before {
+  bottom: 44%;
+}
+
+.nav-toggle-label::after {
+  top: 44%;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 75ms ease-in-out 50ms;
+}
+
+/**********************************************************/
+/*FOOTER*/
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.f-container {
+  margin: auto;
+  max-width: 1200px;
+  /*height: 200px;*/
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer {
+  background-color: var(--black);
+  color: white;
+  padding: 1em;
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.f-row {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.f-col {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  /*margin-bottom: 2px;*/
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  position: relative;
+  /*text-align: center;*/
+  /*colore qui per capire la grandezza di h4*/
+}
+
+.f-col::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: var(--blue);
+  height: 2px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.f-row ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.f-row ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  transition: all 300ms ease;
+}
+
+.f-row ul li a:hover {
+  color: var(--blue);
+  padding-left: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-links i {
+  padding-left: 10px;
+}
+
+/*******************************************************/
+/**RESPONSIVE TOOL**/
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    grid-column: 1 / span 1;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+    text-decoration: none;
+  }
+
+  /*growing bar when hover=true*/
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--blue);
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform ease-in-out 200ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .title {
+    all: unset;
+    color: var(--blue);
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .f-row {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .f-col::before {
+    width: 120px;
+  }
+}
+
+.footer-test {
+  margin-top: auto;
+}
+
+/*********************************************************/
+/**CONTENT**/
+
+.content-container {
+  margin: 10% 2% 6% 2%;
+}
+
+@media (max-width: 800px) {
+  .content-container {
+    margin: 16% 2% 6% 2%;
+  }
 }

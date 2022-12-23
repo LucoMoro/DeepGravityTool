@@ -1,3 +1,93 @@
-{% extends 'tool/common.html' %} {% block content %} {% if data %}
-<p>{{data}}</p>
-{% endif %} {% endblock %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'tool/style.css' %}" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <header>
+      <a class="logo" href="{%  url 'home' %}">
+        <img
+          src="{% static 'tool/dg_logo.png' %}"
+          alt=""
+          width="60"
+          height="60"
+          style="margin: 6px"
+        />
+      </a>
+      <h2 class="title">DeepGravityTool</h2>
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        class="nav-toggle"
+        style="display: none"
+      />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+    <div class="content-container">
+      {% if data %}
+
+      <h1>PROVA PROVA</h1>
+      <p>{{data}}</p>
+
+      {% endif %}
+    </div>
+
+    <footer class="footer">
+      <div class="f-container">
+        <div class="f-row">
+          <h4 class="f-col">company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="f-row">
+          <h4 class="f-col">get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shippinh</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order</a></li>
+          </ul>
+        </div>
+        <div class="f-row">
+          <h4 class="f-col">online shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">address</a></li>
+          </ul>
+        </div>
+        <div class="f-row">
+          <h4 class="f-col">Algorithms</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-github"></i> DeepGravity</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-github"></i> Tool</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
