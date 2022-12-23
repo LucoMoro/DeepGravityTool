@@ -1,106 +1,25 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'tool/style.css' %}" />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-/>
+{% extends 'tool/common.html' %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <body>
-    <header>
-      <a class="logo" href="{%  url 'home' %}">
-        <img
-          src="{% static 'tool/dg_logo.png' %}"
-          alt=""
-          width="60"
-          height="60"
-          style="margin: 6px"
-        />
-      </a>
-      <h2 class="title">DeepGravityTool</h2>
-      <input
-        type="checkbox"
-        id="nav-toggle"
-        class="nav-toggle"
-        style="display: none"
-      />
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav>
+<div class="content-container">
+  <div>
+    <p class="lead">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+    <a href="{%  url 'jupyter' %}" type="button" class="btn btn-primary"
+      >Vai a jupyter</a
+    >
+    <a href="{%  url 'results' %}" type="button" class="btn btn-secondary"
+      >Esegui algoritmo</a
+    >
+  </div>
+</div>
 
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-    </header>
-
-    <div class="content-container">
-      <div>
-        <p class="lead">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-        <a href="{%  url 'jupyter' %}" type="button" class="btn btn-primary"
-          >Vai a jupyter</a
-        >
-        <a href="{%  url 'results' %}" type="button" class="btn btn-secondary"
-          >Esegui algoritmo</a
-        >
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="f-container">
-        <div class="f-row">
-          <h4 class="f-col">company</h4>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
-            <li><a href="#">privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
-          </ul>
-        </div>
-        <div class="f-row">
-          <h4 class="f-col">get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shippinh</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order</a></li>
-          </ul>
-        </div>
-        <div class="f-row">
-          <h4 class="f-col">online shop</h4>
-          <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">address</a></li>
-          </ul>
-        </div>
-        <div class="f-row">
-          <h4 class="f-col">Algorithms</h4>
-          <ul>
-            <li>
-              <a href="#"><i class="fa-brands fa-github"></i> DeepGravity</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-github"></i> Tool</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+{% endblock %}
