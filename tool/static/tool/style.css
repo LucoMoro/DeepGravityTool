@@ -521,19 +521,23 @@ ul {
   /* Make sure that all arrows are pointing leftwards */
   .t-container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid var(--grey);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--grey) transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
-    left: 15px;
+    left: 19px;
   }
 
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
+  }
+
+  .t-container.right::after {
+    left: 19px;
   }
 }
