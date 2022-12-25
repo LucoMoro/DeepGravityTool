@@ -1,36 +1,10 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'tool/style.css' %}" />
-
+<link rel="stylesheet" href="/static/tool/style.css?{% now 'U' %}" />
 <!DOCTYPE html>
 <html lang="en">
-  <header>
-    <a class="logo" href="{%  url 'home' %}">
-      {% load static %}
-      <img
-        src="{% static 'tool/dg_logo.png' %}"
-        alt=""
-        width="60"
-        height="60"
-        style="margin: 6px"
-      />
-    </a>
-    <h2 class="title">DeepGravityTool</h2>
-    <input
-      type="checkbox"
-      id="nav-toggle"
-      class="nav-toggle"
-      style="display: none"
-    />
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </nav>
-
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-    </label>
-  </header>
+  <body>
+    <div class="btn-container">
+      <a href="#" class="btn"><span>Button</span><i></i></a>
+    </div>
+  </body>
 </html>
