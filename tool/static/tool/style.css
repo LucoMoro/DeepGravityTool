@@ -637,7 +637,6 @@ ul {
 
 .li-item {
   color: var(--blue);
-  text-transform: uppercase;
 }
 
 .a-link {

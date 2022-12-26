@@ -1,2 +1,20 @@
 {% extends 'tool/common.html' %} {% block content %} {% load static %}
+
+<div class="content-container">
+  <p>
+    Nel caso in cui i quattro algoritmi siano stati correttamente eseguiti, per
+    vederne i risultati, è necessario
+    <a href="{% url 'jupyter'%}" class="a-link"> run jupyter</a>. Mediante file
+    "plots.ipynb" e cliccando "Cell->Run all" in Jupyter, sarà possibile
+    eseguire l'intero file. Il pdf contenente i grafi in output sarà
+    automaticmante salvato nella cartella "plots".
+  </p>
+  <p>
+    Nel caso in si verifichino problemi con l'esecuzione del file, controllare
+    se, i passaggi
+    <a href="{% url 'experiments' %}" class="a-link">qui riportati</a> siano
+    stati seguiti correttamente.
+  </p>
+</div>
+
 {%endblock %}
