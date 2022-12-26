@@ -9,5 +9,6 @@ urlpatterns=[
     path('mfg_results', views.mfg_results, name='mfg_results'),
     path('jupyter', views.jupyter, name='jupyter'),
     path('navtest', views.navtest, name='navtest'),
+    path('about_me', views.about_me, name='about_me'),
     path('footertest', views.footertest, name='footertest'),
 ]

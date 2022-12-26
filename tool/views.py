@@ -120,3 +120,6 @@ def navtest(request):
 
 def footertest(request):
     return render(request, 'tool/footertest.html')
+
+def about_me(request):
+    return render(request, 'tool/about_me.html')

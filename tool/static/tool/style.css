@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+p {
+  text-align: justify;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -343,7 +347,6 @@ ul {
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  background-color: red;
   margin-bottom: 4%;
 }
 
@@ -358,7 +361,6 @@ ul {
 .c-wrapper .card {
   position: relative;
   max-width: 100%; /*max-width: 100%; */
-  background-color: yellow;
   margin: 10px;
   padding: 15px;
   display: flex;
@@ -375,6 +377,12 @@ ul {
 
 .c-wrapper .card .c-content {
   margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .c-image-container {
+    align-self: center;
+  }
 }
 
 @media (max-width: 600px) {
