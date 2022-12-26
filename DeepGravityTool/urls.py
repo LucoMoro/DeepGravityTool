@@ -20,7 +20,7 @@ from django.conf import settings
 from tool import views 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="admin"),
     path('tool/', include('tool.urls')),
     path('', views.tool)
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

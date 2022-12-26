@@ -30,8 +30,9 @@
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="{% url 'about_me' %}">About</a></li>
+          <li><a href="{% url 'about_me' %}">About me</a></li>
           <li><a href="http://127.0.0.1:8000/admin/">Admin</a></li>
+          <li><a href="{% url 'plot_results' %}">Results</a></li>
         </ul>
       </nav>
 
@@ -47,39 +48,47 @@
     <footer class="footer">
       <div class="f-container">
         <div class="f-row">
-          <h4 class="f-col">company</h4>
+          <h4 class="f-col">Project</h4>
           <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
-            <li><a href="#">privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
+            <li><a href="{% url 'about_me' %}">about me</a></li>
+            <li><a href="{% url 'setup'%}">setup</a></li>
+            <li><a href="#">experiments</a></li>
+            <li><a href="#">admin area</a></li>
           </ul>
         </div>
         <div class="f-row">
-          <h4 class="f-col">get help</h4>
+          <h4 class="f-col">run code</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shippinh</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order</a></li>
+            <li><a href="{%  url 'dg_results' %}">run DG</a></li>
+            <li><a href="{%  url 'g_results' %}">run G</a></li>
+            <li><a href="{%  url 'ng_results' %}">run NG</a></li>
+            <li><a href="{%  url 'mfg_results' %}">run MFG</a></li>
           </ul>
         </div>
         <div class="f-row">
-          <h4 class="f-col">online shop</h4>
+          <h4 class="f-col">Results</h4>
           <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">address</a></li>
+            <li>
+              <a href="{%  url 'plot_results' %}">Plot results</a>
+            </li>
           </ul>
         </div>
         <div class="f-row">
           <h4 class="f-col">Algorithms</h4>
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-github"></i> DeepGravity</a>
+              <a
+                href="https://github.com/scikit-mobility/DeepGravity"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i> DeepGravity</a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-github"></i> Tool</a>
+              <a
+                href="https://github.com/LucoMoro/DeepGravityTool"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i> Tool</a
+              >
             </li>
           </ul>
         </div>

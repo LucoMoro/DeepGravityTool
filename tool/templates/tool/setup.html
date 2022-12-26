@@ -1,0 +1,82 @@
+{% extends 'tool/common.html' %} {% block content %} {% load static %}
+
+<div class="content-container">
+  <p>
+    Per eseguire il tool è necessario definire il path assoluto, in cui sono
+    presenti i main file di DeepGravity ed il path assoluto in cui è presente il
+    file "plots.ipynb", mediante
+    <a href="http://127.0.0.1:8000/admin/" class="a-link"> admin area</a>. è
+    possibile, inoltre, definire(usare set up) il valore delle variabili che
+    l'algoritmo dovrà prendere in input, di seguito spiegate:
+  </p>
+  <ul class="ul-setup">
+    <li>
+      <b class="li-item">batch_size:</b> Input batch size for training (default:
+      1)
+    </li>
+    <li>
+      <b class="li-item">test_batch_size:</b> Input batch size for testing
+      (default: 1)
+    </li>
+    <li>
+      <b class="li-item">epochs:</b> Number of epochs to train (default: 10)
+    </li>
+    <li><b class="li-item">lr:</b> Learning rate (default: 5e-6)</li>
+    <li><b class="li-item">momentum:</b> SGD momentum (default: 0.9)</li>
+    <li><b class="li-item">seed:</b> Random seed (default: 1234)</li>
+    <li>
+      <b class="li-item">log_interval:</b> How many batches to wait before
+      logging training status(default: 1)
+    </li>
+    <li>
+      <b class="li-item">device:</b> Wheter this is running on cpu or gpu
+      (default: cpu)
+    </li>
+    <li><b class="li-item">mode:</b> Can be train or test (default: train)</li>
+    <li>
+      <b class="li-item">tessellation_area:</b> The area to tessel if a
+      tessellation is not provided (default: United Kingdom)
+    </li>
+    <li>
+      <b class="li-item">tessellation_size:</b> The tessellation size (meters)
+      if a tessellation is not provided (default: 25000)
+    </li>
+    <li>
+      <b class="li-item">tile_id_column:</b> Column name of tile's identifier
+      (default: tile_ID)
+    </li>
+    <li>
+      <b class="li-item">tile_geometry:</b> Column name of tile's geometry
+      (default: geometry)
+    </li>
+    <li>
+      <b class="li-item">oa_id_column:</b> Column name of oa's identifier
+      (default: oa_ID)
+    </li>
+    <li>
+      <b class="li-item">oa_geometry:</b> Column name of oa's geometry (default:
+      geometry)
+    </li>
+    <li>
+      <b class="li-item">flow_origin_column:</b> Column name of flows' origin
+      (default: origin)
+    </li>
+    <li>
+      <b class="li-item">flow_destination_column:</b> Column name of flows'
+      destination (default: destination)
+    </li>
+    <li>
+      <b class="li-item">flow_flows_column:</b> Column name of flows' actual
+      value (default: value)
+    </li>
+  </ul>
+
+  <p>
+    Nel caso in cui si vogliano usare i default value delle variabili è
+    possibile
+    <a class="a-link" href="{% url 'experiments' %}">eseguire</a> direttamente
+    uno dei quattro algoritmi. Per maggiori informazioni sul file "plots.ipynb"
+    <a class="a-link" href="{% url 'plot_results' %}">clicca qui</a>.
+  </p>
+</div>
+{% endblock %}

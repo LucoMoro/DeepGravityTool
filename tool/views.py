@@ -123,3 +123,12 @@ def footertest(request):
 
 def about_me(request):
     return render(request, 'tool/about_me.html')
+
+def setup(request):
+    return render(request, 'tool/setup.html')
+
+def plot_results(request):
+    return render(request, 'tool/plot_results.html')
+
+def experiments(request):
+    return render(request, 'tool/experiments.html')
