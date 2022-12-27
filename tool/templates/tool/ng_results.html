@@ -1,11 +1,32 @@
 {% extends 'tool/common.html' %} {% block content %}
 
 <div class="content-container">
-  {% if data %}
-
-  <h1>PROVA PROVA</h1>
-  <p>{{data}}</p>
-
-  {% endif %}
+  <h3 class="h3-setup">
+    L'esecuzione del Nonlinear Gravity model è andata a buon fine
+  </h3>
+  <p>
+    Ora, è possibile eseguire gli altri tre algoritmi(per maggiori informazioni
+    <a href="{% url 'experiments'%}" class="a-link">click here</a>). Nel caso in
+    cui gli altri tre algoritmi siano stati precedentemente eseguiti è possibile
+    eseguire il file "plots.ipynb" per visualizzare graficamente i risultati
+    dell'algoritmo cliccando
+    <a href="{% url 'plot_results' %}" class="a-link">here</a>, oppure è
+    possibile visualizzare i risultati in formato excel nella cartella "results"
+    di Deep Gravity.
+  </p>
+  <p>
+    Nel caso in cui si vogliano rieseguire gli algoritmi è possibile cliccare
+    <a href="{% url 'experiments' %}" class="a-link">here</a>.
+  </p>
+  <p>
+    Nel caso in cui si si verifichino degli errori assicurarsi di aver
+    correttamente seguito le istruzioni
+    <a href="{% url 'how_to_use' %}" class="a-link">qui riportate</a>, o che la
+    web app sia stata correttamente eseguita nello stesso enviroment in cui è
+    presente DeepGravity. Per maggiori informazioni
+    <a href="https://github.com/LucoMoro/DeepGravityTool" class="a-link"
+      >clicca qui</a
+    >.
+  </p>
 </div>
 {% endblock %}

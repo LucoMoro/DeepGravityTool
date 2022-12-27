@@ -17,6 +17,11 @@ p {
   text-align: justify;
 }
 
+.h3-setup {
+  font-weight: bold;
+  color: var(--blue);
+}
+
 html {
   height: 100%;
   width: 100%;

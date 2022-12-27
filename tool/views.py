@@ -248,7 +248,7 @@ def jupyter(request):
 def navtest(request):
     return render(request, 'tool/navtest.html')
 
-def footertest(request):
+def all_results(request):
     commands = cmdCommands.objects.all()
     for command in commands:
         if(command.name == "main_path"):
@@ -303,7 +303,7 @@ def footertest(request):
     os.chdir(main_path)
     cmd_command="python MFG_main.py --dataset "+dataset+" --oa-id-column "+oa_id_column+" --flow-origin-column "+flow_origin_column+" --flow-destination-column "+flow_destination_column+" --flow-flows-column "+flow_flows_column+" --epochs "+epochs+" --batch_size "+batch_size+" --test-batch-size "+test_batch_size+" --lr "+lr+" --momentum "+momentum+" --seed "+seed+" --log-interval "+log_interval+" --device "+device+" --tessellation-area "+tessellation_area+" --tessellation-size "+tessellation_size+" --tile-id-column "+tile_id_column+" --tile-geometry "+tile_geometry+" --oa-geometry "+oa_geometry+" --mode "+mode
     subprocess.run(cmd_command, shell=True, check=True)
-    return render(request, 'tool/footertest.html')
+    return render(request, 'tool/all_results.html')
 
 def about_me(request):
     return render(request, 'tool/about_me.html')
