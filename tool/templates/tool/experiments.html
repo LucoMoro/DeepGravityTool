@@ -1,2 +1,25 @@
 {% extends 'tool/common.html' %} {% block content %} {% load static %}
+
+<div class="content-container">
+  <p>
+    Impostate le variabili, è finalmente possibile eseguire l'algoritmo. Per
+    come è stato programmato, DeepGravity permette non solo di eseguire DG, ma
+    permette anche l'esecuzione di altri tre algoritmi: NG, MFG e G. Spiegati
+    brevemente
+    <a href="{% url 'home' %}" class="a-link">here</a>, la loro esecuzione è
+    utile per il confronto dei risultati prodotti da DeepGravity con altri
+    algoritmi, capaci di lavorare su dataset simili:
+  </p>
+  <ul>
+    <li><a href="{%  url 'dg_results' %}" class="a-link">run DG</a></li>
+    <li><a href="{%  url 'g_results' %}" class="a-link">run G</a></li>
+    <li><a href="{%  url 'ng_results' %}" class="a-link">run NG</a></li>
+    <li><a href="{%  url 'mfg_results' %}" class="a-link">run MFG</a></li>
+  </ul>
+  <p>
+    Nel caso in cui si vogliano eseguire tutti e quattro gli algoritmi è
+    possibile cliccare <a href="{%  url 'footertest' %}" class="a-link">here</a>
+  </p>
+</div>
+
 {%endblock %}

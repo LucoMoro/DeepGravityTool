@@ -11,8 +11,9 @@ urlpatterns=[
     path('navtest', views.navtest, name='navtest'),
     path('about_me', views.about_me, name='about_me'),
     path('footertest', views.footertest, name='footertest'),
-    path('setup', views.setup, name='setup'),
+    path('how_to_use', views.how_to_use, name='how_to_use'),
     path('plot_results', views.plot_results, name='plot_results'),
     path('experiments', views.experiments, name='experiments'),
+    path('inputs', views.inputs, name='inputs')
     
 ]   

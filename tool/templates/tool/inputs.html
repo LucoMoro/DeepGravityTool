@@ -1,14 +1,16 @@
 {% extends 'tool/common.html' %} {% block content %} {% load static %}
 
 <div class="content-container">
-  <p>
-    Per eseguire il tool è necessario definire il path assoluto, in cui sono
-    presenti i main file di DeepGravity ed il path assoluto in cui è presente il
-    file "plots.ipynb", mediante
-    <a href="http://127.0.0.1:8000/admin/" class="a-link"> admin area</a>. è
-    possibile, inoltre, definire(usare set up) il valore delle variabili che
-    l'algoritmo dovrà prendere in input, di seguito spiegate:
-  </p>
+    <p>
+        Variabili per i path assoluti dei file:
+        <ul class="ul-setup">
+            <li><b class="li-item">main_path:</b> Path assoluto per i main file di DeepGravity </li>
+            <li><b class="li-item">plots_path:</b> Path assoluto per il file "plots.ipynb" di DeepGravity</li>
+        </ul>
+    </p>
+    
+    <p>
+    Inputs dell'algoritmo:
   <ul class="ul-setup">
     <li>
       <b class="li-item">batch_size:</b> Input batch size for training (default:
@@ -70,16 +72,14 @@
       value (default: value)
     </li>
   </ul>
+</p>
 
-  <b class="li-item">Da notare:</b> Il valore di ogni variabile, a prescindere
-  dal tipo, dovrà essere passato come stringa e quindi racchiuso tra apici ('')
-  o doppi apici ("").
-  <p>
-    Nel caso in cui si vogliano usare i default value delle variabili è
-    possibile
-    <a class="a-link" href="{% url 'experiments' %}">eseguire</a> direttamente
-    uno dei quattro algoritmi. To plot the results
-    <a class="a-link" href="{% url 'plot_results' %}">click here</a>.
-  </p>
+<p><b class="li-item">Da notare:</b> Mentre è possibile 
+    non modificare gli input, lasciandoli quindi con 
+    i propri valori di default, è assoluramente 
+    richiesta la modifica di <b class="li-item">main_path</b> e 
+    <b class="li-item">plots_path</b> per la corretta esecuzione dell'algoritmo.
+</p>
+
 </div>
 {% endblock %}

@@ -1,74 +1,28 @@
 {% extends 'tool/common.html' %} {% block content %} {% load static %}
 
 <div class="content-container">
-  <div class="c-container">
-    <div class="c-wrapper">
-      <div class="card">
-        <div class="c-image-container">
-          <img src="{% static 'tool/dg_logo.png' %}" class="c-image" />
-        </div>
-        <div class="c-content">
-          <h2>Titolo</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="c-image-container">
-          <img src="{% static 'tool/dg_logo.png' %}" class="c-image" />
-        </div>
-        <div class="c-content">
-          <h2>Titolo</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="c-image-container">
-          <img src="{% static 'tool/dg_logo.png' %}" class="c-image" />
-        </div>
-        <div class="c-content">
-          <h2>Titolo</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="c-image-container">
-          <img src="{% static 'tool/dg_logo.png' %}" class="c-image" />
-        </div>
-        <div class="c-content">
-          <h2>Titolo</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <p>
+    L'esecuzione dei quattro algoritmi è stata correttamente eseguita. Ora, è
+    possibile eseguire il file "plots.ipynb" per visualizzarne graficamente i
+    risultati cliccando
+    <a href="{% url 'plot_results' %}" class="a-link">here</a>, oppure è
+    possibile visualizzare i risultati excel nella cartella "results" di Deep
+    Gravity.
+  </p>
+  <p>
+    Nel caso in cui si vogliano rieseguire gli algoritmi è possibile cliccare
+    <a href="{% url 'experiments' %}" class="a-link">here</a>.
+  </p>
+  <p>
+    Nel caso in cui si siano verificati degli errori assicurarsi di aver
+    correttamente seguito le istruzioni
+    <a href="{% url 'how_to_use' %}" class="a-link">qui riportate</a>, o che la
+    web app sia stata correttamente installata nello stesso enviroment in cui è
+    presente DeepGravity. Per maggiori informazioni
+    <a href="https://github.com/LucoMoro/DeepGravityTool" class="a-link"
+      >clicca qui</a
+    >.
+  </p>
 </div>
 
 {% endblock %}
