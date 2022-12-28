@@ -3,57 +3,62 @@
 <div class="timeline">
   <div class="t-container left">
     <div class="t-content">
-      <h2>2017</h2>
+      <h2>G model</h2>
       <p>
-        Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum
-        perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret
-        expetendis his, te elit voluptua dignissim per, habeo iusto primis ea
-        eam.
+        Il Gravity model o modello gravitazionale classico (G), proposto da
+        George K. Zipf nel 1946, è stato il primo modello di successo che si
+        interessasse ai flussi migratori. Esso si basa sull’idea secondo cui il
+        numero di viaggiatori tra due luoghi, definito come flusso, aumenti
+        all’aumentare della popolazione di origine e destinazione e diminuisca
+        all’aumentare della distanza tra i due luoghi.
       </p>
-      <a href="{%  url 'ng_results' %}" type="button" class="btn"
-        ><span> Run NG</span><i></i
+      <a href="{%  url 'g_results' %}" type="button" class="btn"
+        ><span> Run G</span><i></i
       ></a>
     </div>
   </div>
   <div class="t-container right">
     <div class="t-content">
-      <h2>2016</h2>
+      <h2>DG model</h2>
       <p>
-        Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum
-        perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret
-        expetendis his, te elit voluptua dignissim per, habeo iusto primis ea
-        eam.
-      </p>
-      <a href="{%  url 'mfg_results' %}" type="button" class="btn"
-        ><span>run MFG</span><i></i
-      ></a>
-    </div>
-  </div>
-  <div class="t-container left">
-    <div class="t-content">
-      <h2>2015</h2>
-      <p>
-        Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum
-        perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret
-        expetendis his, te elit voluptua dignissim per, habeo iusto primis ea
-        eam.
+        Il Deep Gravity model (DG), sviluppato dall’Istituto di scienza e
+        tecnologie dell’informazione del Consiglio Nazionale delle Ricerche in
+        collaborazione con la Fondazione Bruno Kessler di Trento e con l’Argonne
+        National Laboratory degli USA il 12 novembre 2021, è un modello atto
+        alla predizione di flussi di mobilità. Tramite la maggiore capacità di
+        generalizzazione e l'assenza di dati storici in input, Deep Gravity è
+        riuscito a generare flussi realistici anche per aree geografiche per le
+        quali non erano disponibili dati durante la fase di addestramento.
       </p>
       <a href="{%  url 'dg_results' %}" type="button" class="btn"
         ><span>run DG</span><i></i
       ></a>
     </div>
   </div>
+  <div class="t-container left">
+    <div class="t-content">
+      <h2>NG model</h2>
+      <p>
+        Il Nonlinear Gravity model(NG) utilizza una rete neurale feed-forward
+        unita alla struttura di Deep Gravity, avendo, però, caratteristiche in
+        input, ovvero popolazione e distanza, analoghe al Gravity model.
+      </p>
+      <a href="{%  url 'ng_results' %}" type="button" class="btn"
+        ><span>run NG</span><i></i
+      ></a>
+    </div>
+  </div>
   <div class="t-container right">
     <div class="t-content">
-      <h2>2012</h2>
+      <h2>MFG model</h2>
       <p>
-        Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum
-        perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret
-        expetendis his, te elit voluptua dignissim per, habeo iusto primis ea
-        eam.
+        Il Multi-Feature Gravity model (MFG) utilizza le stesse caratteristiche
+        e variabili geografiche date in input a Deep Gravity, estratte da
+        OneStreetMap, variando però a tempo di elaborazione. L'input verrà
+        infatti processato da una rete neurale lineare a strato singolo.
       </p>
-      <a href="{%  url 'g_results' %}" type="button" class="btn"
-        ><span>run G</span><i></i
+      <a href="{%  url 'mfg_results' %}" type="button" class="btn"
+        ><span>run MFG</span><i></i
       ></a>
     </div>
   </div>

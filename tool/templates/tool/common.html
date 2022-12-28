@@ -29,7 +29,7 @@
       />
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="{%  url 'home' %}">Home</a></li>
           <li><a href="{% url 'about_me' %}">About me</a></li>
           <li><a href="http://127.0.0.1:8000/admin/">Admin</a></li>
           <li><a href="{% url 'how_to_use' %}">how to use </a></li>
@@ -50,8 +50,8 @@
         <div class="f-row">
           <h4 class="f-col">Project</h4>
           <ul>
-            <li><a href="{% url 'about_me' %}">about me</a></li>
             <li><a href="{% url 'how_to_use'%}">how to use</a></li>
+            <li><a href="{% url 'inputs' %}">inputs</a></li>
             <li><a href="{%  url 'experiments' %}">experiments</a></li>
             <li><a href="http://127.0.0.1:8000/admin/">admin area</a></li>
           </ul>
