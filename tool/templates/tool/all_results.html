@@ -1,32 +1,30 @@
 {% extends 'tool/common.html' %} {% block content %} {% load static %}
 
 <div class="content-container">
-  <h3 class="h3-setup">
-    L'esecuzione dei quattro algoritmi è andata a buon fine
-  </h3>
+  <h3 class="h3-setup">The execution of the four algorithms is completed.</h3>
   <p>
-    Ora, è possibile eseguire il file "plots.ipynb" per visualizzarne
-    graficamente i risultati cliccando
+    Now, it is possible to run the file "plots.ipynb" in order to graphically
+    view the results by clicking
+
     <a href="{% url 'plot_results' %}" class="a-link">here</a>, oppure è
     possibile visualizzare i risultati in formato excel nella cartella "results"
     di Deep Gravity.
   </p>
   <p>
-    Nel caso in cui si vogliano eseguire nuovamente gli algoritmi è possibile
-    cliccare
+    In case you want to rerun the algorithms it is possible by clicking
     <a href="{% url 'experiments' %}" class="a-link">here</a>.
   </p>
   <p>
-    Nel caso in cui si siano verificati degli errori assicurarsi di aver
-    correttamente seguito le istruzioni
-    <a href="{% url 'how_to_use' %}" class="a-link">qui riportate</a>, o che la
-    web app sia stata correttamente eseguita nello stesso enviroment in cui è
-    presente DeepGravity. Per maggiori informazioni
+    In case any errors occurred make sure you have correctly followed the
+    instructions
+    <a href="{% url 'how_to_use' %}" class="a-link">here shown</a>, or that the
+    web app has been correctly run in the same enviroment in which is installed
+    DeepGravity. For more information
     <a
       href="https://github.com/LucoMoro/DeepGravityTool"
       class="a-link"
       target="_blank"
-      >clicca qui</a
+      >click here</a
     >.
   </p>
 </div>

@@ -5,12 +5,11 @@
     <div class="t-content">
       <h2>G model</h2>
       <p>
-        Il Gravity model o modello gravitazionale classico (G), proposto da
-        George K. Zipf nel 1946, è stato il primo modello di successo che si
-        interessasse ai flussi migratori. Esso si basa sull’idea secondo cui il
-        numero di viaggiatori tra due luoghi, definito come flusso, aumenti
-        all’aumentare della popolazione di origine e destinazione e diminuisca
-        all’aumentare della distanza tra i due luoghi.
+        The Gravity model (G), proposed by George K. Zipf in 1946, was the first
+        successful model to be interested in migratory flows. It is based on the
+        idea that the number of travelers between two places, defined as flow,
+        increases as the population of origin and destination increases and
+        decreases as the distance between the two places increases.
       </p>
       <a href="{%  url 'g_results' %}" type="button" class="btn"
         ><span> Run G</span><i></i
@@ -21,14 +20,14 @@
     <div class="t-content">
       <h2>DG model</h2>
       <p>
-        Il Deep Gravity model (DG), sviluppato dall’Istituto di scienza e
-        tecnologie dell’informazione del Consiglio Nazionale delle Ricerche in
-        collaborazione con la Fondazione Bruno Kessler di Trento e con l’Argonne
-        National Laboratory degli USA il 12 novembre 2021, è un modello atto
-        alla predizione di flussi di mobilità. Tramite la maggiore capacità di
-        generalizzazione e l'assenza di dati storici in input, Deep Gravity è
-        riuscito a generare flussi realistici anche per aree geografiche per le
-        quali non erano disponibili dati durante la fase di addestramento.
+        The Deep Gravity model (DG), developed by the Institute of Information
+        Science and Technologies of the National Research Council in
+        collaboration with Fondazione Bruno Kessler of Trento and with the
+        Argonne National Laboratory of the USA on November 12, 2021, is a model
+        suitable for predicting mobility flows. Through the greater capacity for
+        generalization and the absence of input historical data, Deep Gravity
+        was able to generate realistic flows even for regions for which no data
+        was available during the training phase.
       </p>
       <a href="{%  url 'dg_results' %}" type="button" class="btn"
         ><span>run DG</span><i></i
@@ -39,9 +38,10 @@
     <div class="t-content">
       <h2>NG model</h2>
       <p>
-        Il Nonlinear Gravity model(NG) utilizza una rete neurale feed-forward
-        unita alla struttura di Deep Gravity, avendo, però, caratteristiche in
-        input, ovvero popolazione e distanza, analoghe al Gravity model.
+        The Nonlinear Gravity model (NG) uses a feed-forward neural network
+        combined with the Deep Gravity structure, having, however, input
+        characteristics, namely population and distance, similar to the Gravity
+        model.
       </p>
       <a href="{%  url 'ng_results' %}" type="button" class="btn"
         ><span>run NG</span><i></i
@@ -52,10 +52,10 @@
     <div class="t-content">
       <h2>MFG model</h2>
       <p>
-        Il Multi-Feature Gravity model (MFG) utilizza le stesse caratteristiche
-        e variabili geografiche date in input a Deep Gravity, estratte da
-        OneStreetMap, variando però a tempo di elaborazione. L'input verrà
-        infatti processato da una rete neurale lineare a strato singolo.
+        The Multi-Feature Gravity model (MFG) uses the same features and
+        geographic variables input to Deep Gravity, extracted from OneStreetMap,
+        but varies in processing time. The input will be processed by a
+        single-layer linear neural network.
       </p>
       <a href="{%  url 'mfg_results' %}" type="button" class="btn"
         ><span>run MFG</span><i></i

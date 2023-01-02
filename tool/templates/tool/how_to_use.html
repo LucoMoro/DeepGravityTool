@@ -2,20 +2,23 @@
 
 <div class="content-container">
   <p>
-    Per eseguire il tool è necessario:
+    To run tool it is necessary:
     <ul class="ul-setup">
-      <li>definire il path assoluto in cui sono presenti i main file di Deep Gravity</li>
-      <li>definire il path assoluto in cui è presente il file "plots.ipynb"</li>
-      <li>definire, nel caso in cui non si vogliano usare i valori standard delle variabili, i valori da dare alle variabili in input </li>
+      <li>Define the complete path in which the main files of DeepGravity are present.</li>
+      <li>Define the complete path in which the "plots.ipynb" files are present.</li>
+      <li>Define, in case you won't to use the standard values of the variables, the values to give to the variables in input. </li>
     </ul>
-    Tutte queste operazioni sono possibili mediante <a href="http://127.0.0.1:8000/admin/" class="a-link" target="_blank">admin area</a>. 
-    è possibile accedere all'admin area usando come credenziale per passowrd e username la key "admin".  
-    Entrati, cliccando su "<b class="li-item">Cmd commandss</b>" sarà possibile modificare tutte le variabili utili per l'esecuzione dell'algoritmo. 
-    Per maggiori informazioni sulle variabili <a href="{% url 'inputs'%}" class="a-link"> click here</a>.
+    All these operations are possible by using  <a href="http://127.0.0.1:8000/admin/" class="a-link" target="_blank">admin area</a>. 
+    It is possible to log into the admin area using as
+     credentials for password and username the key “admin”.
+      Once in, clicking on  "<b class="li-item">Cmd commandss
+      </b>". It is possible to modify 
+    all the variables useful for the running of the algorithm. 
+    For further information on the variables  <a href="{% url 'inputs'%}" class="a-link"> click here</a>.
   </p>
 
   <p>
-    Nel caso in cui siano stati eseguiti correttamente i passaggi precedenti, è possibile
+    If you have correctly done the previous steps, it is possible to 
     <a class="a-link" href="{% url 'experiments' %}">run the experiment</a>. To plot the results
     <a class="a-link" href="{% url 'plot_results' %}">click here</a>.
   </p>
