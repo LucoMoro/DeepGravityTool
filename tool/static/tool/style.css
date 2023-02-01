@@ -322,6 +322,10 @@ ul {
     margin-bottom: 10px;
   }
 
+  .body-footer {
+    margin-top: 200px;
+  }
+
   .f-col::before {
     width: 120px;
   }
